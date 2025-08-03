@@ -14,7 +14,6 @@ class AppointmentTest extends TestCase
 {
     use RefreshDatabase;
 
-    // tests/Feature/AppointmentTest.php
     public function test_user_can_book_appointment()
     {
         $user = User::factory()->create();

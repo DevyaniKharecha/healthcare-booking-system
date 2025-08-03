@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "0bbf368c-c6bd-48e1-af67-c1f9bdd3fefe",
+		"name": "healthcare-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2225598"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example221.com\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"john@example221.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All appointments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4NzE3MC1hNTQ5LTcwMzMtYWQ4NS1kMzYwOTgzNGQ0YTkiLCJqdGkiOiIzYzcwMDNiMmJlYjQ1NTM1MGI1NjAyOGI3MWQ4ODZhMjA4YTRmMjQ5NDJhMmI1OTU0ODBlYjkwNTU2OWM4ZTFiYTMzZTJmZDc5YzQ2MmE1OSIsImlhdCI6MTc1NDI0OTkxOC4xMDUwNSwibmJmIjoxNzU0MjQ5OTE4LjEwNTA1MywiZXhwIjoxNzg1Nzg1OTE4LjA5MTYxOSwic3ViIjoiNCIsInNjb3BlcyI6W119.MnFRET0LDX7zglAGqnQ8wuSzlO1rYDc--esCFrrA90swxfMcvcI0Of6cYPehBOTznLFwsmT_j-O0mLuPWRyhN5gdUj-t2rBh9wF4tzOf5KFv9Wbm8_OElGjP2min5tcvRwngDm1zT1uXWCOhw0pGLd1flLupObWpKUsDRS7Xqz4jk4oCSlP5nM4_QA777gXcwmQRQKwu1FpdnXnzTlaq5afW7_o8vo10GKcVrXC8vNWpyyVc9RwwPU7vl6W39M7F7g7YMfk0S0a3mOxhhB4WHWfh-j6fwTVZb7q6yb8g8dDPSO2r6uimFzI1VyNtjp9Vt-ad7-ppbeMF4ZZOmtzQzFCOp_9L6XPyBvpAz9nt82JL8lAfTrD_V8lWqPkbdtxz1rWrpCYmHAqoT_yneZZ2DHR_jHkoDFLWEIrm7cmkxwI8PczmqC3_5jzGLAIY8XxkA121tSVT1ZKohIO4IX1KwYn_yVG--xbB3WXlSItaXvmyIu1wVshQQmhE4CoCJkystaXd0-lkoj_xAyZFTNxuEzdEP8gmGNFc1pu6eJvr0foTRlhHg8elrZrgAAA6mG0f8UkA8hNULfCU9o_kFqj9enq1nWT1FeyZ7uSV-T4eQDOZveG4f2b49Rnth0k2ecrptvGU_C8oZdVyoj8qpHOncRLHWYzJhRY98IoZjTRfEU8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/professionals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"professionals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book Appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4NzE3MC1hNTQ5LTcwMzMtYWQ4NS1kMzYwOTgzNGQ0YTkiLCJqdGkiOiIzYzcwMDNiMmJlYjQ1NTM1MGI1NjAyOGI3MWQ4ODZhMjA4YTRmMjQ5NDJhMmI1OTU0ODBlYjkwNTU2OWM4ZTFiYTMzZTJmZDc5YzQ2MmE1OSIsImlhdCI6MTc1NDI0OTkxOC4xMDUwNSwibmJmIjoxNzU0MjQ5OTE4LjEwNTA1MywiZXhwIjoxNzg1Nzg1OTE4LjA5MTYxOSwic3ViIjoiNCIsInNjb3BlcyI6W119.MnFRET0LDX7zglAGqnQ8wuSzlO1rYDc--esCFrrA90swxfMcvcI0Of6cYPehBOTznLFwsmT_j-O0mLuPWRyhN5gdUj-t2rBh9wF4tzOf5KFv9Wbm8_OElGjP2min5tcvRwngDm1zT1uXWCOhw0pGLd1flLupObWpKUsDRS7Xqz4jk4oCSlP5nM4_QA777gXcwmQRQKwu1FpdnXnzTlaq5afW7_o8vo10GKcVrXC8vNWpyyVc9RwwPU7vl6W39M7F7g7YMfk0S0a3mOxhhB4WHWfh-j6fwTVZb7q6yb8g8dDPSO2r6uimFzI1VyNtjp9Vt-ad7-ppbeMF4ZZOmtzQzFCOp_9L6XPyBvpAz9nt82JL8lAfTrD_V8lWqPkbdtxz1rWrpCYmHAqoT_yneZZ2DHR_jHkoDFLWEIrm7cmkxwI8PczmqC3_5jzGLAIY8XxkA121tSVT1ZKohIO4IX1KwYn_yVG--xbB3WXlSItaXvmyIu1wVshQQmhE4CoCJkystaXd0-lkoj_xAyZFTNxuEzdEP8gmGNFc1pu6eJvr0foTRlhHg8elrZrgAAA6mG0f8UkA8hNULfCU9o_kFqj9enq1nWT1FeyZ7uSV-T4eQDOZveG4f2b49Rnth0k2ecrptvGU_C8oZdVyoj8qpHOncRLHWYzJhRY98IoZjTRfEU8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"healthcare_professional_id\": 2,\r\n  \"appointment_start_time\": \"2025-08-05 14:00:00\",\r\n  \"appointment_end_time\": \"2025-08-05 15:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Appointments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4NzE3MC1hNTQ5LTcwMzMtYWQ4NS1kMzYwOTgzNGQ0YTkiLCJqdGkiOiIzYzcwMDNiMmJlYjQ1NTM1MGI1NjAyOGI3MWQ4ODZhMjA4YTRmMjQ5NDJhMmI1OTU0ODBlYjkwNTU2OWM4ZTFiYTMzZTJmZDc5YzQ2MmE1OSIsImlhdCI6MTc1NDI0OTkxOC4xMDUwNSwibmJmIjoxNzU0MjQ5OTE4LjEwNTA1MywiZXhwIjoxNzg1Nzg1OTE4LjA5MTYxOSwic3ViIjoiNCIsInNjb3BlcyI6W119.MnFRET0LDX7zglAGqnQ8wuSzlO1rYDc--esCFrrA90swxfMcvcI0Of6cYPehBOTznLFwsmT_j-O0mLuPWRyhN5gdUj-t2rBh9wF4tzOf5KFv9Wbm8_OElGjP2min5tcvRwngDm1zT1uXWCOhw0pGLd1flLupObWpKUsDRS7Xqz4jk4oCSlP5nM4_QA777gXcwmQRQKwu1FpdnXnzTlaq5afW7_o8vo10GKcVrXC8vNWpyyVc9RwwPU7vl6W39M7F7g7YMfk0S0a3mOxhhB4WHWfh-j6fwTVZb7q6yb8g8dDPSO2r6uimFzI1VyNtjp9Vt-ad7-ppbeMF4ZZOmtzQzFCOp_9L6XPyBvpAz9nt82JL8lAfTrD_V8lWqPkbdtxz1rWrpCYmHAqoT_yneZZ2DHR_jHkoDFLWEIrm7cmkxwI8PczmqC3_5jzGLAIY8XxkA121tSVT1ZKohIO4IX1KwYn_yVG--xbB3WXlSItaXvmyIu1wVshQQmhE4CoCJkystaXd0-lkoj_xAyZFTNxuEzdEP8gmGNFc1pu6eJvr0foTRlhHg8elrZrgAAA6mG0f8UkA8hNULfCU9o_kFqj9enq1nWT1FeyZ7uSV-T4eQDOZveG4f2b49Rnth0k2ecrptvGU_C8oZdVyoj8qpHOncRLHWYzJhRY98IoZjTRfEU8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel / Delete Appointment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4NzE3MC1hNTQ5LTcwMzMtYWQ4NS1kMzYwOTgzNGQ0YTkiLCJqdGkiOiIzYzcwMDNiMmJlYjQ1NTM1MGI1NjAyOGI3MWQ4ODZhMjA4YTRmMjQ5NDJhMmI1OTU0ODBlYjkwNTU2OWM4ZTFiYTMzZTJmZDc5YzQ2MmE1OSIsImlhdCI6MTc1NDI0OTkxOC4xMDUwNSwibmJmIjoxNzU0MjQ5OTE4LjEwNTA1MywiZXhwIjoxNzg1Nzg1OTE4LjA5MTYxOSwic3ViIjoiNCIsInNjb3BlcyI6W119.MnFRET0LDX7zglAGqnQ8wuSzlO1rYDc--esCFrrA90swxfMcvcI0Of6cYPehBOTznLFwsmT_j-O0mLuPWRyhN5gdUj-t2rBh9wF4tzOf5KFv9Wbm8_OElGjP2min5tcvRwngDm1zT1uXWCOhw0pGLd1flLupObWpKUsDRS7Xqz4jk4oCSlP5nM4_QA777gXcwmQRQKwu1FpdnXnzTlaq5afW7_o8vo10GKcVrXC8vNWpyyVc9RwwPU7vl6W39M7F7g7YMfk0S0a3mOxhhB4WHWfh-j6fwTVZb7q6yb8g8dDPSO2r6uimFzI1VyNtjp9Vt-ad7-ppbeMF4ZZOmtzQzFCOp_9L6XPyBvpAz9nt82JL8lAfTrD_V8lWqPkbdtxz1rWrpCYmHAqoT_yneZZ2DHR_jHkoDFLWEIrm7cmkxwI8PczmqC3_5jzGLAIY8XxkA121tSVT1ZKohIO4IX1KwYn_yVG--xbB3WXlSItaXvmyIu1wVshQQmhE4CoCJkystaXd0-lkoj_xAyZFTNxuEzdEP8gmGNFc1pu6eJvr0foTRlhHg8elrZrgAAA6mG0f8UkA8hNULfCU9o_kFqj9enq1nWT1FeyZ7uSV-T4eQDOZveG4f2b49Rnth0k2ecrptvGU_C8oZdVyoj8qpHOncRLHWYzJhRY98IoZjTRfEU8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/appointments/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"appointments",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Complete",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4NzE3MC1hNTQ5LTcwMzMtYWQ4NS1kMzYwOTgzNGQ0YTkiLCJqdGkiOiIzYzcwMDNiMmJlYjQ1NTM1MGI1NjAyOGI3MWQ4ODZhMjA4YTRmMjQ5NDJhMmI1OTU0ODBlYjkwNTU2OWM4ZTFiYTMzZTJmZDc5YzQ2MmE1OSIsImlhdCI6MTc1NDI0OTkxOC4xMDUwNSwibmJmIjoxNzU0MjQ5OTE4LjEwNTA1MywiZXhwIjoxNzg1Nzg1OTE4LjA5MTYxOSwic3ViIjoiNCIsInNjb3BlcyI6W119.MnFRET0LDX7zglAGqnQ8wuSzlO1rYDc--esCFrrA90swxfMcvcI0Of6cYPehBOTznLFwsmT_j-O0mLuPWRyhN5gdUj-t2rBh9wF4tzOf5KFv9Wbm8_OElGjP2min5tcvRwngDm1zT1uXWCOhw0pGLd1flLupObWpKUsDRS7Xqz4jk4oCSlP5nM4_QA777gXcwmQRQKwu1FpdnXnzTlaq5afW7_o8vo10GKcVrXC8vNWpyyVc9RwwPU7vl6W39M7F7g7YMfk0S0a3mOxhhB4WHWfh-j6fwTVZb7q6yb8g8dDPSO2r6uimFzI1VyNtjp9Vt-ad7-ppbeMF4ZZOmtzQzFCOp_9L6XPyBvpAz9nt82JL8lAfTrD_V8lWqPkbdtxz1rWrpCYmHAqoT_yneZZ2DHR_jHkoDFLWEIrm7cmkxwI8PczmqC3_5jzGLAIY8XxkA121tSVT1ZKohIO4IX1KwYn_yVG--xbB3WXlSItaXvmyIu1wVshQQmhE4CoCJkystaXd0-lkoj_xAyZFTNxuEzdEP8gmGNFc1pu6eJvr0foTRlhHg8elrZrgAAA6mG0f8UkA8hNULfCU9o_kFqj9enq1nWT1FeyZ7uSV-T4eQDOZveG4f2b49Rnth0k2ecrptvGU_C8oZdVyoj8qpHOncRLHWYzJhRY98IoZjTRfEU8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/appointments/2/complete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"appointments",
+						"2",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

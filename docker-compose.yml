@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: healthcare-booking-app
+        container_name: healthcare-booking-app
+        restart: unless-stopped
+        volumes:
+            - .:/var/www
+        ports:
+            - "8000:9000"
+        depends_on:
+            - db
+        environment:
+            DB_HOST: db
+            DB_PORT: 3306
+            DB_DATABASE: healthcare_api
+            DB_USERNAME: root
+            DB_PASSWORD: root
+
+    db:
+        image: mysql:8.0
+        container_name: healthcare-db
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: healthcare_api
+            MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - dbdata:/var/lib/mysql
+        ports:
+            - "3306:3306"
+
+volumes:
+    dbdata:

@@ -21,11 +21,19 @@ A Laravel 12 RESTful API for managing healthcare appointments: registration, vie
 # Setup Instructions
 
 # Local (without Docker)
-bash
-cp .env.example .env
-composer install
-php artisan key:generate
-php artisan migrate:fresh --seed
-php artisan passport:install
-npm install && npm run dev (if frontend)
-php artisan serve
+- bash
+- cp .env.example .env
+- env cred :
+  - DB_CONNECTION=mysql
+  - DB_HOST=localhost
+  - DB_PORT=3306
+  - DB_DATABASE=<YOUR DB NAME>
+  - DB_USERNAME=<USERNAME>
+  - DB_PASSWORD=<PASSWORD>
+- composer install
+- php artisan key:generate
+- php artisan migrate:fresh --seed
+- php artisan passport:install
+- php artisan serve
+
+

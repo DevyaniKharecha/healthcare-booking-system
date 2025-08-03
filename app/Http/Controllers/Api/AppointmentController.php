@@ -42,7 +42,7 @@ class AppointmentController extends Controller
 
         $appointment = Appointment::create([
             'user_id' => auth()->id(),
-            ...$validated,
+            $validated,
         ]);
 
         return response()->json($appointment, 201);
@@ -81,7 +81,6 @@ class AppointmentController extends Controller
         $appointment->update(['status' => 'completed']);
         return response()->json(['message' => 'Appointment marked as completed.']);
     }
-
 
 }
 

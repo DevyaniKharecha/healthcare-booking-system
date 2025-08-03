@@ -20,7 +20,8 @@ A Laravel 12 RESTful API for managing healthcare appointments: registration, vie
 
 # Setup Instructions
 
-# Local (without Docker)
+# Local (without Docker) 
+- create 1 db one for project and other for test named api_healthcare_test
 - bash
 - cp .env.example .env
 - env cred :
